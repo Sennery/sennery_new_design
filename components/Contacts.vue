@@ -18,12 +18,12 @@
                         <div class="d-flex flex-no-wrap justify-space-between">
                             <p 
                                 class="contact-h first" 
-                                :class="{ translateHeaders: contactsTranslateY }">
+                                :class="{ translateHeaders: activate }">
                                 CONTACT
                             </p>                                
                             <p 
                                 class="contact-h second d-none d-md-flex" 
-                                :class="{ translateHeaders: contactsTranslateY }">
+                                :class="{ translateHeaders: activate }">
                                 ME, FRIEND
                             </p>
 
@@ -46,13 +46,19 @@
                                             min-height="10vh"
                                             min-width="30rem" 
                                             elevation="5"                               
-                                            :class="{ translateContacts: contactsTranslateY }"
-                                            :style="{transform: 'translateY(2rem)', 
-                                                    transition: 'transform ' + (0.05*i + 0.1) + 's ease-in'}">
+                                            :class="{ translateContacts: activate }"
+                                            :style="{transform: 'translateY(2rem) scale(0.9)', 
+                                                    transition: 'transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28) ' + (0.05*i + 0.1) + 's'}">
 
                                             <v-card-title
                                                 class="display-1">
-                                                {{ it.title }}
+                                                <TextAppearence
+                                                    :text="it.title"                                            
+                                                    :time=".75"
+                                                    :delay="0.1"
+                                                    from="b"
+                                                    :opacity="true"                                            
+                                                    :show="activate"/>
                                             </v-card-title>
                                             <v-icon
                                                 large
@@ -73,10 +79,15 @@
 </template>
 
 <script>
+import TextAppearence from '~/components/helpers/TextAppearence.vue'
+
 export default {
     props: {
         scroll: Number,
         height: Number
+    },
+    components: {
+        TextAppearence
     },
     data() {
         return {
@@ -120,7 +131,7 @@ export default {
         }
     },
     computed: {
-        contactsTranslateY() {
+        activate() {
             return (this.scroll/this.height) > 0.45
         },
         theme(){
@@ -138,12 +149,13 @@ export default {
     }
 
     .translateContacts {
-        transform: translateY(-7.5rem) !important;
+        transform: translateY(-7.5rem) scale(1) !important;
     }
 
     .translateHeaders {
         transform: rotateZ(-90deg)
-                translateX(0) !important;
+                translateX(0)
+                scale(1) !important;
     }
     
     .contact-h {
@@ -151,19 +163,20 @@ export default {
         font-size: 10rem;
         transform-origin: 0%;
         transform: rotateZ(-90deg)
-                translateX(-7.5rem);
+                translateX(-7.5rem)
+                scale(0.95);
         color: white;        
         bottom: -40%;
         white-space: nowrap;
 
         &.first {
             left: 25%;
-            transition: transform 0.3s ease-in;
+            transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
         }
 
         &.second {
             left: 40%;
-            transition: transform 0.35s ease-in;
+            transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.1s;
         }
     }
 

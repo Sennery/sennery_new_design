@@ -25,19 +25,40 @@
                             :color="it.icon.color"
                             class="ma-md-1 ma-sm-auto"
                             :class="{ move_cards: moveCards}"
-                            :style="{ transform: 'translateY(' + (2*i + 0.5) + 'rem)', 
-                                      transition: 'transform ' + (0.05*i + 0.1) + 's ease-in'}"
+                            :style="{ transform: 'translateY(5rem)', 
+                                      transition: 'transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28) ' + (0.05*i + 0.1) + 's'}"
                             ripple
                             tile
                             >
                             <div class="d-flex flex-no-wrap justify-space-between" :style="{ color : 'white' }">
                                 <div>
                                     <v-card-title>
-                                        {{ it.title }}
+                                        <TextAppearence
+                                            :text="it.title"                                            
+                                            :time=".75"
+                                            :delay="0.1"
+                                            from="b"
+                                            :opacity="true"                                            
+                                            :show="moveCards"/>
                                     </v-card-title>
-                                    <v-card-text>
-                                        <p class="display-1">{{ it.head }}</p>
-                                        <p class="body-1" :style="{ fontSize : '1.5rem !important'}"> {{ it.text }} </p>
+                                    <v-card-text class="d-flex flex-column">
+                                        <TextAppearence
+                                            class="display-1 mb-2"
+                                            :text="it.head"
+                                            :time=".75"
+                                            :delay="0.1"
+                                            from="b"
+                                            :opacity="true"    
+                                            :show="moveCards"/>
+                                        <TextAppearence
+                                            class="body-1 my-2"
+                                            :style="{ fontSize : '1.5rem !important'}"
+                                            :text="it.text"
+                                            :time="0.75"
+                                            :delay=".01"
+                                            from="l"
+                                            :opacity="true"   
+                                            :show="moveCards"/>
                                     </v-card-text>
                                 </div>
                                 <v-icon
@@ -56,11 +77,16 @@
 </template>
 
 <script>
+import TextAppearence from '~/components/helpers/TextAppearence.vue'
+
 export default {
     name: 'About',
     props: {
         scroll: Number,
         height: Number
+    },
+    components: {
+        TextAppearence
     },
     data() {
         return {
@@ -84,7 +110,7 @@ export default {
                     text: 'I am living in Perm',
                     height: '20vh',
                     width: '10vw',
-                    elevation: '10',
+                    elevation: '7',
                     icon: {
                         name: 'mdi-city',
                         color: '#FB8C00'
@@ -96,7 +122,7 @@ export default {
                     text: 'Develop web-applicatons!',
                     height: '10vh',
                     width: '20vw',
-                    elevation: '10',
+                    elevation: '8',
                     icon: {
                         name: 'mdi-monitor-dashboard',
                         color: '#66BB6A'
@@ -108,7 +134,7 @@ export default {
                     text: 'Code everything!',
                     height: '10vh',
                     width: '20vw',
-                    elevation: '10',
+                    elevation: '5',
                     icon: {
                         name: 'mdi-code-json',
                         color: '#00E5FF'
@@ -120,7 +146,7 @@ export default {
                     text: 'Follow your dream!',
                     height: '20vh',
                     width: '20vw',
-                    elevation: '10',
+                    elevation: '6',
                     icon: {
                         name: 'mdi-book-open-page-variant',
                         color: '#5E35B1'
