@@ -3,7 +3,8 @@
         class="start pa-0 ma-0" 
         :class="{ 'elevation-3': pointPassed }"
         :style="{background: $vuetify.theme.themes[theme].background}"
-        fluid>
+        fluid
+    >
         <Logo :title="menuRotate" :pointPassed="pointPassed"/>
     </v-container>
 </template>

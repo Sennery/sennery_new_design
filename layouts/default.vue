@@ -1,14 +1,14 @@
 <template>
-  <v-app app dark>
-    <Nuxt/>
-  </v-app>
+    <v-app app dark>
+        <Nuxt/>
+    </v-app>
 </template>
 
 <script>
 export default {
-  data () {
-    return {
+    data () {
+        return {
+        }
     }
-  }
 }
 </script>

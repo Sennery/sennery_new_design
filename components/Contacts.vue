@@ -1,80 +1,89 @@
 <template>
-    <v-row no-gutters>
-        <v-col  justify="center" align="center" class="pa-0">
-            <v-row 
-                justify="start" 
-                align="center" 
-                no-gutters 
-                style="height: 100vh; overflow: hidden;" 
-                elevation="10">
-                <v-col sm="12" md="4">
-
-                    <v-card
-                        color="#1E88E5"
-                        elevation="5"
-                        max-height="50vh"
-                        min-width="50vw"
+    <v-row 
+        justify="start" 
+        align="center" 
+        no-gutters 
+        style="height: 100vh; overflow: hidden;" 
+        elevation="10"
+    >
+        <v-col 
+            justify="center" 
+            align="center" 
+            class="pa-0" 
+            sm="12" md="4"
+        >
+            <v-card
+                color="#1E88E5"
+                elevation="5"
+                max-height="50vh"
+                min-width="50vw"
+            >
+                <div class="d-flex flex-no-wrap justify-space-between">
+                    <p 
+                        class="contact-h first" 
+                        :class="{ translateHeaders: activate }"
                     >
-                        <div class="d-flex flex-no-wrap justify-space-between">
-                            <p 
-                                class="contact-h first" 
-                                :class="{ translateHeaders: activate }">
-                                CONTACT
-                            </p>                                
-                            <p 
-                                class="contact-h second d-none d-md-flex" 
-                                :class="{ translateHeaders: activate }">
-                                ME, FRIEND
-                            </p>
+                        CONTACT
+                    </p>                                
+                    <p 
+                        class="contact-h second d-none d-md-flex" 
+                        :class="{ translateHeaders: activate }"
+                    >
+                        ME, FRIEND
+                    </p>
 
-                            <v-sheet
-                                class="sheet"
-                                max-width="50%"
+                    <v-sheet
+                        class="sheet"
+                        max-width="50%"
+                    >
+                        <v-row 
+                            no-gutters
+                            class="mr-0"
+                        >
+                            <v-col 
+                                class="ma-2 pa-0 contact_card"
+                                cols="auto"
+                                v-for="(it, i) in contacts"
+                                :key="it.title"
+                            >
+
+                                <v-card
+                                    tile
+                                    ripple
+                                    min-height="10vh"
+                                    min-width="30rem" 
+                                    elevation="5"                               
+                                    :class="{ translateContacts: activate }"
+                                    :style="{transform: 'translateY(2rem) scale(0.9)', 
+                                            transition: 'transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28) ' + (0.05*i + 0.1) + 's'}"
                                 >
-                                <v-row 
-                                    no-gutters
-                                    class="mr-0">
-                                    <v-col 
-                                        class="ma-2 pa-0 contact_card"
-                                        cols="auto"
-                                        v-for="(it, i) in contacts"
-                                        :key="it.title">
 
-                                        <v-card
-                                            tile
-                                            ripple
-                                            min-height="10vh"
-                                            min-width="30rem" 
-                                            elevation="5"                               
-                                            :class="{ translateContacts: activate }"
-                                            :style="{transform: 'translateY(2rem) scale(0.9)', 
-                                                    transition: 'transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28) ' + (0.05*i + 0.1) + 's'}">
-
-                                            <v-card-title
-                                                class="display-1">
-                                                <TextAppearence
-                                                    :text="it.title"                                            
-                                                    :time=".75"
-                                                    :delay="0.1"
-                                                    from="b"
-                                                    :opacity="true"                                            
-                                                    :show="activate"/>
-                                            </v-card-title>
-                                            <v-icon
-                                                large
-                                                class="ma-md-5 ma-xs-3"
-                                                :color="it.icon.color">
-                                                {{ it.icon.name }}
-                                            </v-icon>
-                                        </v-card>
-                                    </v-col>
-                                </v-row>
-                            </v-sheet>
-                        </div>                            
-                    </v-card>
-                </v-col>
-            </v-row>                               
-        </v-col>        
+                                    <v-card-title
+                                        class="display-1"
+                                    >
+                                        <TextAppearence
+                                            :text="it.title"                                            
+                                            :time=".75"
+                                            :delay="0.1"
+                                            from="b"
+                                            :opacity="true"                                            
+                                            :show="activate"
+                                        />
+                                    </v-card-title>
+                                    <v-icon
+                                        large
+                                        class="ma-md-5 ma-xs-3"
+                                        :color="it.icon.color"
+                                    >
+                                        {{ it.icon.name }}
+                                    </v-icon>
+                                </v-card>
+                            </v-col>
+                        </v-row>
+                    </v-sheet>
+                </div>                            
+            </v-card>
+        </v-col>
     </v-row>
 </template>
 

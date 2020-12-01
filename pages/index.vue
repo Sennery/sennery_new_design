@@ -4,18 +4,22 @@
       class="ma-0 pa-0"
       v-scroll="onScroll" 
       v-resize="onResize"
-      cols="12">
+      cols="12"
+    >
         <Start
           :scroll="scroll"
-          :height="clientHeight"/>
+          :height="clientHeight"
+        />
         
         <About
           :scroll="scroll"
-          :height="clientHeight"/>
+          :height="clientHeight"
+        />
         
         <Contacts
           :scroll="scroll"
-          :height="scrollHeight"/>          
+          :height="scrollHeight"
+        />          
     </v-col>
   </v-row>
 </template>
