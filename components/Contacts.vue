@@ -52,7 +52,7 @@
                                     ripple
                                     min-height="10vh"
                                     min-width="30rem" 
-                                    elevation="5"                               
+                                    elevation="3"                               
                                     :class="{ translateContacts: activate }"
                                     :style="{transform: 'translateY(2rem) scale(0.9)', 
                                             transition: 'transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28) ' + (0.05*i + 0.1) + 's'}"
@@ -142,9 +142,6 @@ export default {
     computed: {
         activate() {
             return (this.scroll/this.height) > 0.45
-        },
-        theme(){
-            return (this.$vuetify.theme.dark) ? 'dark' : 'light'
         }
     }
 }
@@ -177,6 +174,7 @@ export default {
         color: white;        
         bottom: -40%;
         white-space: nowrap;
+        text-shadow: -3px 0px 3px rgba(0, 0, 0, 0.2), -3px 0px 4px rgba(0, 0, 0, 0.14), -1px 0px 8px rgba(0, 0, 0, 0.12);
 
         &.first {
             left: 25%;
@@ -193,7 +191,7 @@ export default {
         transition: transform 0.2s ease;
 
         &:hover{
-            transform: skewX(0.5deg) translateX(-0.5rem);
+            transform: translateX(-0.5rem);
         }        
     }
 
