@@ -69,10 +69,10 @@ export default {
     data() {
         return {
             rotationMap: {
-            face: 0,
-            about: -90,
-            contact: -180,
-            other: -270,
+                face: 0,
+                about: -90,
+                contact: -180,
+                other: -270,
             },
         };
     },

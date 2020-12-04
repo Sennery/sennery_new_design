@@ -30,7 +30,6 @@
                         :class="{ move_cards: moveCards}"
                         :style="{ transform: 'translateY(5rem)', 
                                     transition: 'transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28) ' + (0.05*i + 0.1) + 's'}"
-                        ripple
                         tile
                     >
                         <div 
