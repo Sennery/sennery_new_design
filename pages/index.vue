@@ -55,8 +55,8 @@ export default {
         this.clientHeight = document.documentElement.clientHeight;
     },
     beforeMount() {
-        const theme = window.getComputedStyle(document.body.parentElement).content;
-        this.$vuetify.theme.dark = (theme == 'light') ? false : true;
+        let theme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        this.$vuetify.theme.dark = theme;
     }
 }
 </script>
