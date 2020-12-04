@@ -26,13 +26,11 @@
 
 <script>
 import Start from '~/components/Start.vue'
-import Topic from '~/components/Topic.vue'
 import About from '~/components/About.vue'
 import Contacts from '~/components/Contacts.vue'
 
 export default {
     components: {
-        Topic,
         Start,
         About,
         Contacts
