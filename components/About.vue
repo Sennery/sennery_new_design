@@ -49,7 +49,7 @@
                                 </v-card-title>
                                 <v-card-text class="d-flex flex-column">
                                     <TextAppearence
-                                        class="display-1 mb-2"
+                                        class="display-1 mb-2 bold"
                                         :text="it.head"
                                         :time=".75"
                                         :delay="0.1"

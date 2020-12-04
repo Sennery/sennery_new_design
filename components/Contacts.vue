@@ -18,7 +18,7 @@
                 max-height="50vh"
                 min-width="50vw"
             >
-                <div class="d-flex flex-no-wrap justify-space-between">
+                <div class="d-flex flex-no-wrap justify-space-between bold">
                     <p 
                         class="contact-h first" 
                         :class="{ translateHeaders: activate }"
