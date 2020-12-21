@@ -85,7 +85,7 @@
 </template>
 
 <script>
-import TextAppearence from '~/components/helpers/TextAppearence.vue'
+import TextAppearence from '~/components/utils/TextAppearence.vue'
 
 export default {
     name: 'About',
