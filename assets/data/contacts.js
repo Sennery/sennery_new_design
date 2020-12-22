@@ -1,7 +1,7 @@
 export default [
     {
         title: 'VK',
-        ref: '',
+        ref: 'https://vk.com/sennery',
         icon: {
             name: 'mdi-vk',
             color: ''
@@ -9,7 +9,7 @@ export default [
     },
     {
         title: 'Telegram',
-        ref: '',
+        ref: 'https://t.me/sennery',
         icon: {
             name: 'mdi-telegram',
             color: ''
@@ -18,7 +18,7 @@ export default [
     },
     {
         title: 'GitHub',
-        ref: '',
+        ref: 'https://github.com/sennery',
         icon: {
             name: 'mdi-github',
             color: ''
@@ -27,7 +27,7 @@ export default [
     },
     {
         title: 'Email',
-        ref: '',
+        ref: 'mailto:mac452ares@gmail.com',
         icon: {
             name: 'mdi-at',
             color: ''
