@@ -26,7 +26,7 @@ export default [
         
     },
     {
-        title: 'Mail',
+        title: 'Email',
         ref: '',
         icon: {
             name: 'mdi-at',
