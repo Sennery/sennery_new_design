@@ -52,12 +52,14 @@
                                     ripple
                                     min-height="10vh"
                                     min-width="30rem" 
-                                    elevation="2"
+                                    elevation="4"
                                     target="_blank" 
                                     :href="it.ref"                              
                                     :class="{ translateContacts: activate }"
                                     :style="{transform: 'translateY(2rem) scale(0.9)', 
-                                            transition: 'transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28) ' + (0.05*i + 0.1) + 's'}"
+                                            transition: 'transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28) ' + (0.05*i + 0.1) + 's',
+                                            background: $vuetify.theme.themes[theme].background 
+                                    }"
                                 >
 
                                     <v-card-title
@@ -91,12 +93,16 @@
 
 <script>
 import contactsData from "~/assets/data/contacts.js"
+import ThemeMixin from "~/assets/ThemeMixin.js"
 
 export default {
     props: {
         scroll: Number,
         height: Number
     },
+    mixins: [
+        ThemeMixin
+    ],
     data() {
         return {
             contacts: []

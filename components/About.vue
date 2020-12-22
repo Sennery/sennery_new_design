@@ -24,12 +24,13 @@
                     <v-card
                         :min-height="it.height"
                         :min-width="it.width"
-                        :elevation="it.elevation"                        
+                        :elevation="2"                        
                         :color="it.icon.color"
                         class="ma-md-1 ma-sm-auto"
                         :class="{ move_cards: moveCards}"
                         :style="{ transform: 'translateY(5rem)', 
-                                    transition: 'transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28) ' + (0.05*i + 0.1) + 's'}"
+                                    transition: 'transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28) ' + (0.05*i + 0.1) + 's'
+                        }"
                         tile
                     >
                         <div 

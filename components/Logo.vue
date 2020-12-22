@@ -60,12 +60,17 @@
 </template>
 
 <script>
+import ThemeMixin from "~/assets/ThemeMixin.js"
+
 export default {
     name: "Logo",
         props: {
         title: String,
         pointPassed: Boolean,
     },
+    mixins: [
+        ThemeMixin
+    ],
     data() {
         return {
             rotationMap: {
@@ -92,9 +97,6 @@ export default {
             };
             }
             return null;
-        },
-        theme() {
-            return this.$vuetify.theme.dark ? "dark" : "light";
         },
     },
 };

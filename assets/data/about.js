@@ -5,7 +5,6 @@ export default [
         text: 'My name is Arseny Likhachev',
         height: '10vh',
         width: '10vw',
-        elevation: '10',
         icon: {
             name: 'mdi-account',
             color: '#1E88E5'
@@ -17,7 +16,6 @@ export default [
         text: 'I am living in Perm',
         height: '20vh',
         width: '10vw',
-        elevation: '7',
         icon: {
             name: 'mdi-city',
             color: '#FB8C00'
@@ -29,7 +27,6 @@ export default [
         text: 'Develop web-applicatons!',
         height: '10vh',
         width: '20vw',
-        elevation: '8',
         icon: {
             name: 'mdi-monitor-dashboard',
             color: '#66BB6A'
@@ -41,7 +38,6 @@ export default [
         text: 'Code everything!',
         height: '10vh',
         width: '20vw',
-        elevation: '5',
         icon: {
             name: 'mdi-code-json',
             color: '#00E5FF'
@@ -53,7 +49,6 @@ export default [
         text: 'Follow your dream!',
         height: '20vh',
         width: '20vw',
-        elevation: '6',
         icon: {
             name: 'mdi-book-open-page-variant',
             color: '#5E35B1'
