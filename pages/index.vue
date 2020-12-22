@@ -25,16 +25,8 @@
 </template>
 
 <script>
-import Start from '~/components/Start.vue'
-import About from '~/components/About.vue'
-import Contacts from '~/components/Contacts.vue'
 
 export default {
-    components: {
-        Start,
-        About,
-        Contacts
-    },
     data() {
         return{
             scrollHeight: null,
