@@ -88,6 +88,8 @@
 </template>
 
 <script>
+import contactsData from "~/assets/data/contacts.js"
+
 export default {
     props: {
         scroll: Number,
@@ -95,49 +97,16 @@ export default {
     },
     data() {
         return {
-            contacts: [
-                {
-                    title: 'VK',
-                    ref: '',
-                    icon: {
-                        name: 'mdi-vk',
-                        color: ''
-                    }
-                },
-                {
-                    title: 'Telegram',
-                    ref: '',
-                    icon: {
-                        name: 'mdi-telegram',
-                        color: ''
-                    }
-                    
-                },
-                {
-                    title: 'GitHub',
-                    ref: '',
-                    icon: {
-                        name: 'mdi-github',
-                        color: ''
-                    }
-                    
-                },
-                {
-                    title: 'Mail',
-                    ref: '',
-                    icon: {
-                        name: 'mdi-at',
-                        color: ''
-                    }
-                    
-                }
-            ]
+            contacts: []
         }
     },
     computed: {
         activate() {
             return (this.scroll/this.height) > 0.45
         }
+    },
+    mounted() {
+        this.contacts = contactsData;
     }
 }
 </script>
