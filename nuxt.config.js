@@ -79,6 +79,8 @@ export default {
   },
 
   router: {
-    base: './'
+    base: '/'
   },
+
+  ssr: false
 }
