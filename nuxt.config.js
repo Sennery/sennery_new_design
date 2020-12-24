@@ -82,6 +82,4 @@ export default {
     base: './',
     mode: 'hash'
   },
-
-  mode: 'universal'
 }
