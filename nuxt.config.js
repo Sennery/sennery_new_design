@@ -79,7 +79,8 @@ export default {
   },
 
   router: {
-    base: '/'
+    base: './',
+    mode: 'hash'
   },
 
   ssr: false
