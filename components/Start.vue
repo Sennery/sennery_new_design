@@ -1,7 +1,7 @@
 <template>
     <v-container 
         class="start pa-0 ma-0" 
-        :class="{ 'elevation-3': pointPassed }"
+        :class="{ 'elevation-2': pointPassed }"
         :style="{background: $vuetify.theme.themes[theme].background}"
         fluid
     >
@@ -10,12 +10,16 @@
 </template>
 
 <script>
+import ThemeMixin from "~/assets/res/ThemeMixin.js"
 
 export default {
     props: { 
         scroll: Number,
         height: Number
     },
+    mixins: [
+        ThemeMixin
+    ],
     computed: {
         pointPassed() {
             return (this.scroll > this.height*0.5);
@@ -32,9 +36,6 @@ export default {
                 title = 'face';
             }
             return title;
-        },
-        theme(){
-            return (this.$vuetify.theme.dark) ? 'dark' : 'light'
         }
     }
 }

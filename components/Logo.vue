@@ -60,7 +60,7 @@
 </template>
 
 <script>
-import ThemeMixin from "~/assets/ThemeMixin.js"
+import ThemeMixin from "~/assets/res/ThemeMixin.js"
 
 export default {
     name: "Logo",

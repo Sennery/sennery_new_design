@@ -52,7 +52,7 @@
                                     ripple
                                     min-height="10vh"
                                     min-width="30rem" 
-                                    elevation="4"
+                                    elevation="2"
                                     target="_blank" 
                                     :href="it.ref"                              
                                     :class="{ translateContacts: activate }"
@@ -93,7 +93,7 @@
 
 <script>
 import contactsData from "~/assets/data/contacts.js"
-import ThemeMixin from "~/assets/ThemeMixin.js"
+import ThemeMixin from "~/assets/res/ThemeMixin.js"
 
 export default {
     props: {
