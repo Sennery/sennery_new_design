@@ -83,5 +83,5 @@ export default {
     mode: 'hash'
   },
 
-  ssr: false
+  mode: 'universal'
 }
