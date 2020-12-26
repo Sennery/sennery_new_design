@@ -7,7 +7,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy-to-gh": "gh-pages -d dist"
+    "deploy-to-gh": "nuxt generate && gh-pages -d dist"
   },
   "dependencies": {
     "@nuxtjs/pwa": "^3.0.2",
